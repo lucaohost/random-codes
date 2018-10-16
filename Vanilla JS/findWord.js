@@ -1,7 +1,9 @@
 <script>
-function findWord(word, str) {
-  word = word.toLowerCase();
-  str = str.toLowerCase();
-  return str.split(' ').some(function(w){return w === word})
+function findWord(word, string, ignoreCase) {
+  if(ignoreCase){
+    word = word.toLowerCase();
+    string = string.toLowerCase();
+  }
+  return string.split(' ').some(function(w){return w === word})
 }
 </script>
