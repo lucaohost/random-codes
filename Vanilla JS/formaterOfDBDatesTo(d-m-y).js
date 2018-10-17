@@ -1,6 +1,6 @@
 <script>
 /*
- *myVar can be two things:
+ *myVar can assume two things:
  *1.When you pass true in the second parameter, myVar i'ts considered a class 
  *of elements that have dates which need to be formated.
  *2.When you dont pass the second parameter, myVar i'ts considered the date 
