@@ -1,4 +1,3 @@
-<script>
 /*
  *myDate can assume two things:
  *1.When you pass true in the second parameter, myDate i'ts considered a class 
@@ -26,5 +25,3 @@ function getDMYOfDate(myDate, itsAClass = false){
         return new Date(myDate).toLocaleDateString('en-GB');
     }
 }
-
-</script>

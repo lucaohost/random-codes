@@ -1,4 +1,3 @@
-<script>
 /*
  *returns true if the word exists in certain string
  *if the third parameter is passed as false,the case
@@ -11,4 +10,3 @@ function findWord(word, string, ignoreCase=true) {
   }
   return string.split(' ').some(function(w){return w === word})
 }
-</script>
