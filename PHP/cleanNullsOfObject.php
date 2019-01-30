@@ -19,3 +19,18 @@ function cleanNullsOfObject(&$object) {
             }
         }
     }
+
+//test
+
+$object = new stdClass();
+$object->property = "qwe";
+$object->nullProperty = null;
+$propertyObject = new stdClass();
+$propertyObject->property = "asd";
+$propertyObject->nullProperty = null;
+$object->propertyObject = $propertyObject;
+var_dump($object);
+echo "<br>";
+echo "<br>";
+cleanNullsOfObject($object);
+var_dump($object);
