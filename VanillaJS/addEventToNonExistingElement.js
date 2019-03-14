@@ -5,8 +5,8 @@
  * those lines of code, solve that. 
  */
 
-document.addEventListener("click", function(){
-	if(event.target.id == "myId"){
-		alert("Do something here");
-	}
-});
+ document.addEventListener("click", function(){
+ 	if(event.target.id == "myId"){
+ 		alert("Do something here");
+ 	}
+ });
