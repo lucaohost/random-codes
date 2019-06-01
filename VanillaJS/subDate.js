@@ -1,8 +1,3 @@
 function subDate(dbDate1, dbDate2) {
-    let dateArray = dbDate1.split("-");
-    // month is from 0 to 11
-    date1 = new Date(parseInt(dateArray[0]), parseInt(dateArray[1]) -1, parseInt(dateArray[2]));
-    let dateArray2 = dbDate2.split("-");
-    date1 = new Date(parseInt(dateArray2[0]), parseInt(dateArray2[1]) -1, parseInt(dateArray2[2]));
-    return Math.floor((new Date(dbDate1) - new Date(dbDate2)) / 86400000);
+    return Math.floor((new Date(dbDate1 + "T00:00:00") - new Date(dbDate2 + "T00:00:00")) / 86400000);
 }
