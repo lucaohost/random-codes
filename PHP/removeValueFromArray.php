@@ -10,6 +10,6 @@ function removeValueFromArray(&$array, $value, $allThem = false, $strongComparis
 		}
 	}
 	if(!empty($array)){
-			$array = array_values($array);
+		$array = array_values($array);
 	}
 }
