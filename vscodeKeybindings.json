@@ -1,0 +1,11 @@
+[
+    {
+        "key": "ctrl+y",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    }
+]
