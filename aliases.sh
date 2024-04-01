@@ -15,4 +15,4 @@ alias x="exit"
 alias xx="poweroff"
 
 # Update Aliases
-alias update-aliases="/mnt/c/git/useful-examples/update-aliases.sh"
+alias ua="/mnt/c/git/useful-examples/update-aliases.sh"
