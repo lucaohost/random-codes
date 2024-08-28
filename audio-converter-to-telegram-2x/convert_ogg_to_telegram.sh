@@ -4,6 +4,10 @@
 INPUT_DIR="/mnt/c/Users/lucas/Downloads/Telegram Desktop"   # Change this to your folder containing .ogg files
 OUTPUT_DIR="/mnt/c/Users/lucas/Downloads/Telegram Desktop/Converted" # Folder where converted files will be saved
 
+# Define the initial and final formats
+INITIAL_FORMAT="m4a"   # Change this to the initial format of the input files
+FINAL_FORMAT="ogg"     # Change this to the desired output format
+
 # Check if FFmpeg is installed
 if ! command -v ffmpeg &> /dev/null; then
     echo "FFmpeg is not installed. Please install FFmpeg to proceed."
@@ -14,12 +18,18 @@ fi
 # Create the output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
 
-# Loop through all .m4a files in the input directory
-for file in "$INPUT_DIR"/*.m4a; do
-    # Extract the filename without the directory
-    filename=$(basename "$file")
-    # Define the output file path
-    output_file="$OUTPUT_DIR/$filename"
+# Check if the input directory exists and is not empty
+if [[ ! -d "$INPUT_DIR" || -z "$(ls -A "$INPUT_DIR"/*.$INITIAL_FORMAT 2>/dev/null)" ]]; then
+    echo "No .$INITIAL_FORMAT files found in the input directory ($INPUT_DIR)."
+    exit 1
+fi
+
+# Loop through all files with the specified initial format in the input directory
+for file in "$INPUT_DIR"/*.$INITIAL_FORMAT; do
+    # Extract the base filename without the directory and extension
+    base_filename=$(basename "$file" ".$INITIAL_FORMAT")
+    # Define the output file path with the final format
+    output_file="$OUTPUT_DIR/$base_filename.$FINAL_FORMAT"
 
     # Convert the file with the required metadata
     ffmpeg -i "$file" -c:a libopus -b:a 64k -ar 48000 -ac 1 \
