@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the input and output directories
-INPUT_DIR="/mnt/c/Users/lucas/Downloads/Telegram Desktop"   # Change this to your folder containing .ogg files
-OUTPUT_DIR="/mnt/c/Users/lucas/Downloads/Telegram Desktop/Converted" # Folder where converted files will be saved
+INPUT_DIR="/mnt/c/Users/lucas/Downloads/Slack Notes"   # Change this to your folder containing .ogg files
+OUTPUT_DIR="/mnt/c/Users/lucas/Downloads/Slack Notes/Converted" # Folder where converted files will be saved
 
 # Define the initial and final formats
 INITIAL_FORMAT="m4a"   # Change this to the initial format of the input files
