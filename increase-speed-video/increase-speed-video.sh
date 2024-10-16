@@ -1,0 +1,1 @@
+ffmpeg -i '2024-10-16 13-44-08.mkv' -vf "setpts=PTS/1.33" -af "atempo=1.33, volume=2" output.mkv
