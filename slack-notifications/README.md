@@ -1,0 +1,1 @@
+Vídeo explaning the script better: https://www.youtube.com/watch?v=kNCR9XgdxTQ
