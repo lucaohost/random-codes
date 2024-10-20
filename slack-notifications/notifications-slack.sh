@@ -18,7 +18,7 @@
  sudo rm -rf /usr/lib/slack/resources/app.asar.unpacked
  # Turn off blue dot notifications
  sudo sed -i 's/:t>0/:t<0/g' ~/tmp/slack/dist/main.*.js
- # Edit turn off red dot notifications
- # sudo sed -i 's/return i>0/return i<0/g' ~/tmp/slack/dist/main.*.js
+ # Turn off red dot notifications (only if you want)
+ sudo sed -i 's/return i>0/return i<0/g' ~/tmp/slack/dist/main.*.js
  # Re-pack the modified Slack files back into an app.asar archive
  sudo asar pack ~/tmp/slack /usr/lib/slack/resources/app.asar
