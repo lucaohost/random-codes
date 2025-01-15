@@ -1,0 +1,8 @@
+# Ignore virtual environment directory
+cordinate_mouse_tracking/
+
+# Python bytecode files
+*.pyc
+
+# IDE settings (for Visual Studio Code, for example)
+.vscode/
