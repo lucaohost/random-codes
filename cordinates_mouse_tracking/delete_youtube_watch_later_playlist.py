@@ -32,6 +32,6 @@ while True:
     pyautogui.click(x=x2, y=y2)
     print(f"Clicked at ({x2}, {y2})")
 
-    time.sleep(1)
     print("To stop script, press CTRL + C")
+    time.sleep(2)
     
