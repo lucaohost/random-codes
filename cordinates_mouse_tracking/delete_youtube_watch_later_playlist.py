@@ -25,7 +25,7 @@ while True:
     pyautogui.click(x=x1, y=y1)
     print(f"Clicked at ({x1}, {y1})")
 
-    time.sleep(1)
+    time.sleep(2)
 
     # Click on remove button
     x2, y2 = x_delete_button, y_delete_button  # Replace with your desired coordinates
